@@ -130,6 +130,9 @@
                     
                 </div>
             </form>
+            {% if location %}
+            <p class="output">Your suggested Travel Plan: {{output}}</p>
+            {% endif %}
             <script>
                 function updateValue(value) {
                     document.getElementById('rangeValue').textContent = value;
