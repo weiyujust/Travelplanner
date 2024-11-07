@@ -131,9 +131,11 @@
                 </div>
             </form>
             <div class="divider">
-                {% if output %}
-                <p class="output">Your suggested Travel Plan: {{output}}</p>
-                {% endif %}
+                {% if request.args.get('output') %}
+                <a id="output"></a>
+                <div class="divider">
+                <p class="output cur">Your suggested Travel Plan: {{ request.args.get('output') }}</p>
+                {%endif%}
             </div>
             <script>
                 function updateValue(value) {
